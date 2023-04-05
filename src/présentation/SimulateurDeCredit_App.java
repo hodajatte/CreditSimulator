@@ -12,7 +12,7 @@ import java.io.InputStream;
 import java.lang.reflect.Method;
 import java.util.Properties;
 import java.util.Scanner;
-import java.util.concurrent.Callable;
+
 
 public class SimulateurDeCredit_App {
     static ICréditControleur créditControleur;
@@ -58,16 +58,20 @@ public class SimulateurDeCredit_App {
         } while (!rep.equalsIgnoreCase("OUI"));
           System.out.println(" Au revoir ^_^ ");
           }
+    public static void main(String[] args ) throws Exception {
+        test1();
 
+    }
 
 
  public static void test2() throws Exception {
+
         String daoClass;
         String serviceClass;
         String controllerClass;
         Properties properties = new Properties();
         ClassLoader classLoader =Thread.currentThread().getContextClassLoader();
-        InputStream propertiesFile = classLoader.getResourceAsStream("config.properties");
+        InputStream propertiesFile = classLoader.getResourceAsStream("présentation/config.properties");
         if (propertiesFile==null) throw new Exception("fichier config introuvable !!!");
         else {
             try {
@@ -103,10 +107,8 @@ public class SimulateurDeCredit_App {
             }
         }
 
-    public static void main(String[] args ) throws Exception {
-        test1();
 
-    }
+
  }
 
 
